@@ -3,9 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library Book Availability System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+<div id="wrapper">
+
+    <!-- PAGE 1 -->
+    <div id="page1">
+
+        <!-- NAVBAR -->
+        <nav id="navbar">
+            <p id="navcont1">MyLibrary</p>
+
+            <div id="navcont2">
+                <a href="#">Home</a>
+                <a href="#">Categories</a>
+                <a href="#">Books</a>
+                <a href="#">Recommendations</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div id="navcont3">
+                <button class="navcont3btn" id="navcont3btn1">Login</button>
+                <button class="navcont3btn" id="navcont3btn2">Sign Up</button>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <div id="page1cont2">
+            <div id="page1cont2leftbox">
+                <h1>Find Your Next</h1>
+                <h1>Favorite Book</h1>
+                <p>
+                    Search books from our digital library and check <br>
+                    real-time availability. Get recommendations <br>
+                    based on your interest and category.
+                </p>
+                <button id="page1cont2leftboxbtn">Explore Books</button>
+            </div>
+
+            <div id="page1cont2leftbox">
+                <img src="library.png" alt="Library Image">
+            </div>
+        </div>
+
+        <!-- SEARCH BOX -->
+        <div id="page1cont2Inputbox">
+            <input type="text" placeholder="  Enter Book Name / Author">
+            <select>
+                <option>All Categories</option>
+                <option>Computer Science</option>
+                <option>Electronics</option>
+                <option>Mathematics</option>
+                <option>Fiction</option>
+                <option>Non-Fiction</option>
+            </select>
+            <button>Search</button>
+        </div>
+
+    </div>
+
+    <!-- PAGE 2 -->
+    <div id="page2">
+        <h1>Browse By Category</h1>
+
+        <div id="page2categories">
+            <div class="page2categorybox">
+                <img src="cs.png" width="70" height="70">
+                <p>Computer Science</p>
+            </div>
+
+            <div class="page2categorybox">
+                <img src="math.png" width="70" height="70">
+                <p>Mathematics</p>
+            </div>
+
+            <div class="page2categorybox">
+                <img src="electronics.png" width="70" height="70">
+                <p>Electronics</p>
+            </div>
+
+            <div class="page2categorybox">
+                <img src="fiction.png" width="70" height="70">
+                <p>Fiction</p>
+            </div>
+
+            <div class="page2categorybox">
+                <img src="nonfiction.png" width="70" height="70">
+                <p>Non-Fiction</p>
+            </div>
+
+            <div class="page2categorybox">
+                <img src="research.png" width="70" height="70">
+                <p>Research</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div id="page3">
+
+        <!-- FEATURED BOOKS -->
+        <div id="featured">
+            <h1>Featured Books</h1>
+
+            <div id="featuredcont">
+
+                <div class="featuredcontbox">
+                    <img src="book1.jpg">
+                    <p><strong>Data Structures</strong></p>
+                    <p>Author: Mark Allen</p>
+                    <p>Status: Available</p>
+                </div>
+
+                <div class="featuredcontbox">
+                    <img src="book2.jpg">
+                    <p><strong>Digital Electronics</strong></p>
+                    <p>Author: R. P. Jain</p>
+                    <p>Status: Issued</p>
+                </div>
+
+                <div class="featuredcontbox">
+                    <img src="book3.jpg">
+                    <p><strong>Engineering Maths</strong></p>
+                    <p>Author: K. A. Stroud</p>
+                    <p>Status: Available</p>
+                </div>
+
+                <div class="featuredcontbox">
+                    <img src="book4.jpg">
+                    <p><strong>Artificial Intelligence</strong></p>
+                    <p>Author: Stuart Russell</p>
+                    <p>Status: Available</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RECOMMENDATIONS -->
+        <div id="promo">
+            <h1>Recommended For You</h1>
+
+            <div id="promocont">
+
+                <div class="promocontbox">
+                    <img src="star.png" width="35" height="35">
+                    <p><strong>Web Development Basics</strong></p>
+                </div>
+
+                <div class="promocontbox">
+                    <img src="star.png" width="35" height="35">
+                    <p><strong>Python Programming</strong></p>
+                </div>
+
+                <div class="promocontbox">
+                    <img src="star.png" width="35" height="35">
+                    <p><strong>Database Management Systems</strong></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PAGE 4 -->
+    <div id="page4">
+        <h1>What Students Say</h1>
+
+        <div id="page4cont2">
+
+            <div class="page4cont2boxes">
+                <img src="user1.jpg" height="200">
+                <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+                <p>
+                    "This library system makes searching books very easy. 
+                    I can check availability before going to the library."
+                </p>
+                <p><strong>Student A</strong></p>
+            </div>
+
+            <div class="page4cont2boxes">
+                <img src="user2.jpg" height="200">
+                <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+                <p>
+                    "The recommendation section helps me find new books 
+                    related to my subjects."
+                </p>
+                <p><strong>Student B</strong></p>
+            </div>
+
+            <div class="page4cont2boxes">
+                <img src="user3.jpg" height="200">
+                <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+                <p>
+                    "Very simple and user-friendly system for students 
+                    and library staff."
+                </p>
+                <p><strong>Student C</strong></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>© 2026 MyLibrary - Library Book Availability & Recommendation System</p>
+        <p>Developed by B.Tech CSE Students</p>
+    </div>
+
+</div>
+
 </body>
 </html>
