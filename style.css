@@ -1,227 +1,252 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* NAVBAR */
-#navbar{
-    height: 60px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0px 0px 10px rgb(200, 200, 200);
+body {
+  background-color: #f5f7fb;
+  color: #0d1b2a;
 }
 
-#navcont1{
-    font-size: 30px;
-    color: rgb(0, 102, 204);
-    font-weight: 800;
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px #cccccc;
 }
 
-#navcont2 a{
-    text-decoration: none;
-    color: rgb(44, 41, 41);
-    margin: 10px;
-    font-size: 15px;
-    font-weight: 500;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e88e5;
 }
 
-#navcont2 a:hover{
-    text-shadow: 0px 0px 10px rgb(0, 102, 204);
+.logo img {
+  height: 40px;
 }
 
-.navcont3btn{
-    padding: 10px;
-    border-radius: 50px;
-    width: 90px;
-    font-weight: 700;
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #0d1b2a;
+  font-weight: 500;
 }
 
-#navcont3btn1{
-    border: 2px solid rgb(0, 102, 204);
-    color: rgb(0, 102, 204);
-    background-color: white;
-    cursor: pointer;
+.nav-links a:hover {
+  color: #1e88e5;
 }
 
-#navcont3btn2{
-    border: none;
-    background-color: rgb(0, 102, 204);
-    color: white;
-    cursor: pointer;
+/* ================= BUTTONS ================= */
+.btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-/* PAGE 1 */
-#page1cont2{
-    display: flex;
-    height: 400px;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #f5f9ff;
+.primary {
+  background-color: #1e88e5;
+  color: white;
 }
 
-#page1cont2leftbox{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.primary:hover {
+  background-color: #1565c0;
 }
 
-#page1cont2leftbox h1{
-    font-size: 45px;
+.outline {
+  background-color: white;
+  border: 2px solid #1e88e5;
+  color: #1e88e5;
 }
 
-#page1cont2leftbox p{
-    color: gray;
+.outline:hover {
+  background-color: #1e88e5;
+  color: white;
 }
 
-#page1cont2leftboxbtn{
-    border: none;
-    background-color: rgb(0, 102, 204);
-    color: white;
-    cursor: pointer;
-    padding: 10px 30px;
-    border-radius: 30px;
-    margin-top: 20px;
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  background-color: #ffffff;
 }
 
-#page1cont2leftbox img{
-    border-radius: 20px;
-    height: 250px;
+.hero-text {
+  width: 50%;
 }
 
-/* SEARCH BOX */
-#page1cont2Inputbox{
-    box-shadow: 0px 0px 10px rgb(207, 207, 207);
-    border: 2px solid rgb(164, 160, 160);
-    height: 70px;
-    width: 600px;
-    margin: -35px auto;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-#page1cont2Inputbox input,
-#page1cont2Inputbox select{
-    height: 30px;
-    width: 200px;
+.hero-text p {
+  color: #666666;
+  margin-bottom: 15px;
 }
 
-#page1cont2Inputbox button{
-    border: none;
-    background-color: rgb(0, 102, 204);
-    color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
+.hero-image img {
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px #cccccc;
 }
 
-/* PAGE 2 */
-#page2{
-    height: 400px;
-    padding: 100px;
-    background: linear-gradient(to right, #ffffff, #eef5ff);
+/* ================= OBJECTIVES ================= */
+.objectives {
+  padding: 60px;
+  background-color: #f5f7fb;
 }
 
-#page2categories{
-    display: flex;
-    gap: 25px;
-    margin-top: 50px;
+.objectives h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
-.page2categorybox{
-    height: 140px;
-    width: 140px;
-    text-align: center;
-    align-content: center;
-    border: 2px solid gray;
-    border-radius: 10px;
-    transition: transform 0.3s;
+.objective-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.page2categorybox:hover{
-    transform: scale(1.05);
+.objective-card {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #cccccc;
 }
 
-/* PAGE 3 */
-#featured{
-    padding: 40px;
+.objective-card h3 {
+  margin-bottom: 10px;
+  color: #1e88e5;
 }
 
-#featured h1{
-    font-size: 35px;
-    margin-bottom: 20px;
+/* ================= SEARCH ================= */
+.search-section {
+  padding: 60px;
+  background-color: #ffffff;
 }
 
-#featuredcont{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+.search-bar {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-.featuredcontbox{
-    box-shadow: 0px 0px 5px lightgray;
-    width: 250px;
-    border-radius: 15px;
-    overflow: hidden;
-    padding-bottom: 10px;
+.search-bar input,
+.search-bar select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
 }
 
-.featuredcontbox img{
-    width: 100%;
-    height: 120px;
+/* ================= BOOKS ================= */
+.featured {
+  padding: 60px;
+  background-color: #f5f7fb;
 }
 
-.featuredcontbox p{
-    padding: 10px;
+.book-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* RECOMMENDATION */
-#promo{
-    background: linear-gradient(to right, #dbe9ff, white);
-    padding: 40px;
+.book-card {
+  background-color: #ffffff;
+  padding: 15px;
+  width: 220px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #cccccc;
 }
 
-#promocont{
-    display: flex;
-    gap: 20px;
+.book-card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
 }
 
-.promocontbox{
-    background: white;
-    height: 80px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px lightgray;
+.status {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
 }
 
-/* PAGE 4 */
-#page4{
-    padding: 40px;
+.available {
+  background-color: #d4edda;
+  color: #2e7d32;
 }
 
-#page4cont2{
-    display: flex;
-    gap: 30px;
+.issued {
+  background-color: #f8d7da;
+  color: #c62828;
 }
 
-.page4cont2boxes{
-    width: 220px;
-    text-align: center;
+/* ================= RECOMMEND ================= */
+.recommend {
+  padding: 60px;
+  background-color: #ffffff;
 }
 
-/* FOOTER */
-#footer{
-    background-color: #002244;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.recommend-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.recommend-card {
+  background-color: #f5f7fb;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 0 10px #cccccc;
+}
+
+/* ================= ADMIN ================= */
+.admin-section {
+  padding: 60px;
+  background-color: #f5f7fb;
+}
+
+.admin-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.admin-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 0 10px #cccccc;
+}
+
+.admin-card input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background-color: #0d1b2a;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }

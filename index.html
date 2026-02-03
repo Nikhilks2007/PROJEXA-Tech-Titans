@@ -1,219 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Book Availability System</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Library Book Availability System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="wrapper">
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="Logo">
+    <span>Library System</span>
+  </div>
 
-    <!-- PAGE 1 -->
-    <div id="page1">
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#search">Search Books</a>
+    <a href="#featured">Featured</a>
+    <a href="#recommend">Recommendations</a>
+    <a href="#admin">Admin</a>
+  </div>
 
-        <!-- NAVBAR -->
-        <nav id="navbar">
-            <p id="navcont1">MyLibrary</p>
+  <div class="nav-buttons">
+    <button class="btn outline">Login</button>
+    <button class="btn primary">Sign Up</button>
+  </div>
+</nav>
 
-            <div id="navcont2">
-                <a href="#">Home</a>
-                <a href="#">Categories</a>
-                <a href="#">Books</a>
-                <a href="#">Recommendations</a>
-                <a href="#">Contact</a>
-            </div>
+<!-- ================= HERO SECTION ================= -->
+<section class="hero" id="overview">
+  <div class="hero-text">
+    <h1>Library Book Availability & Recommendation System</h1>
+    <p>
+      This project is a simple computer-based system that helps students
+      and librarians to check book availability, search books easily, and
+      get recommendations based on interest and popular books.
+    </p>
 
-            <div id="navcont3">
-                <button class="navcont3btn" id="navcont3btn1">Login</button>
-                <button class="navcont3btn" id="navcont3btn2">Sign Up</button>
-            </div>
-        </nav>
+    <p>
+      The main goal is to reduce manual work, save time, and improve
+      the overall library management process.
+    </p>
 
-        <!-- HERO SECTION -->
-        <div id="page1cont2">
-            <div id="page1cont2leftbox">
-                <h1>Find Your Next</h1>
-                <h1>Favorite Book</h1>
-                <p>
-                    Search books from our digital library and check <br>
-                    real-time availability. Get recommendations <br>
-                    based on your interest and category.
-                </p>
-                <button id="page1cont2leftboxbtn">Explore Books</button>
-            </div>
+    <button class="btn primary">Explore Library</button>
+  </div>
 
-            <div id="page1cont2leftbox">
-                <img src="library.png" alt="Library Image">
-            </div>
-        </div>
+  <div class="hero-image">
+    <img src="assets/images/book1.jpg" alt="Library Image">
+  </div>
+</section>
 
-        <!-- SEARCH BOX -->
-        <div id="page1cont2Inputbox">
-            <input type="text" placeholder="  Enter Book Name / Author">
-            <select>
-                <option>All Categories</option>
-                <option>Computer Science</option>
-                <option>Electronics</option>
-                <option>Mathematics</option>
-                <option>Fiction</option>
-                <option>Non-Fiction</option>
-            </select>
-            <button>Search</button>
-        </div>
+<!-- ================= OBJECTIVES ================= -->
+<section class="objectives">
+  <h2>Project Objectives</h2>
 
+  <div class="objective-grid">
+    <div class="objective-card">
+      <h3>Real-Time Availability</h3>
+      <p>Show whether a book is available or already issued.</p>
     </div>
 
-    <!-- PAGE 2 -->
-    <div id="page2">
-        <h1>Browse By Category</h1>
-
-        <div id="page2categories">
-            <div class="page2categorybox">
-                <img src="cs.png" width="70" height="70">
-                <p>Computer Science</p>
-            </div>
-
-            <div class="page2categorybox">
-                <img src="math.png" width="70" height="70">
-                <p>Mathematics</p>
-            </div>
-
-            <div class="page2categorybox">
-                <img src="electronics.png" width="70" height="70">
-                <p>Electronics</p>
-            </div>
-
-            <div class="page2categorybox">
-                <img src="fiction.png" width="70" height="70">
-                <p>Fiction</p>
-            </div>
-
-            <div class="page2categorybox">
-                <img src="nonfiction.png" width="70" height="70">
-                <p>Non-Fiction</p>
-            </div>
-
-            <div class="page2categorybox">
-                <img src="research.png" width="70" height="70">
-                <p>Research</p>
-            </div>
-        </div>
+    <div class="objective-card">
+      <h3>Search System</h3>
+      <p>Allow users to search books by name, author, or category.</p>
     </div>
 
-    <!-- PAGE 3 -->
-    <div id="page3">
-
-        <!-- FEATURED BOOKS -->
-        <div id="featured">
-            <h1>Featured Books</h1>
-
-            <div id="featuredcont">
-
-                <div class="featuredcontbox">
-                    <img src="book1.jpg">
-                    <p><strong>Data Structures</strong></p>
-                    <p>Author: Mark Allen</p>
-                    <p>Status: Available</p>
-                </div>
-
-                <div class="featuredcontbox">
-                    <img src="book2.jpg">
-                    <p><strong>Digital Electronics</strong></p>
-                    <p>Author: R. P. Jain</p>
-                    <p>Status: Issued</p>
-                </div>
-
-                <div class="featuredcontbox">
-                    <img src="book3.jpg">
-                    <p><strong>Engineering Maths</strong></p>
-                    <p>Author: K. A. Stroud</p>
-                    <p>Status: Available</p>
-                </div>
-
-                <div class="featuredcontbox">
-                    <img src="book4.jpg">
-                    <p><strong>Artificial Intelligence</strong></p>
-                    <p>Author: Stuart Russell</p>
-                    <p>Status: Available</p>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- RECOMMENDATIONS -->
-        <div id="promo">
-            <h1>Recommended For You</h1>
-
-            <div id="promocont">
-
-                <div class="promocontbox">
-                    <img src="star.png" width="35" height="35">
-                    <p><strong>Web Development Basics</strong></p>
-                </div>
-
-                <div class="promocontbox">
-                    <img src="star.png" width="35" height="35">
-                    <p><strong>Python Programming</strong></p>
-                </div>
-
-                <div class="promocontbox">
-                    <img src="star.png" width="35" height="35">
-                    <p><strong>Database Management Systems</strong></p>
-                </div>
-
-            </div>
-        </div>
-
+    <div class="objective-card">
+      <h3>Recommendations</h3>
+      <p>Suggest books based on user interest and popular choices.</p>
     </div>
 
-    <!-- PAGE 4 -->
-    <div id="page4">
-        <h1>What Students Say</h1>
-
-        <div id="page4cont2">
-
-            <div class="page4cont2boxes">
-                <img src="user1.jpg" height="200">
-                <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
-                <p>
-                    "This library system makes searching books very easy. 
-                    I can check availability before going to the library."
-                </p>
-                <p><strong>Student A</strong></p>
-            </div>
-
-            <div class="page4cont2boxes">
-                <img src="user2.jpg" height="200">
-                <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
-                <p>
-                    "The recommendation section helps me find new books 
-                    related to my subjects."
-                </p>
-                <p><strong>Student B</strong></p>
-            </div>
-
-            <div class="page4cont2boxes">
-                <img src="user3.jpg" height="200">
-                <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
-                <p>
-                    "Very simple and user-friendly system for students 
-                    and library staff."
-                </p>
-                <p><strong>Student C</strong></p>
-            </div>
-
-        </div>
+    <div class="objective-card">
+      <h3>Reduce Manual Work</h3>
+      <p>Help librarians manage books digitally and easily.</p>
     </div>
 
-    <!-- FOOTER -->
-    <div id="footer">
-        <p>© 2026 MyLibrary - Library Book Availability & Recommendation System</p>
-        <p>Developed by B.Tech CSE Students</p>
+    <div class="objective-card">
+      <h3>Improve Speed</h3>
+      <p>Make the library process faster and more accurate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SEARCH BAR ================= -->
+<section class="search-section" id="search">
+  <h2>Search Books</h2>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Enter Book Name">
+    <input type="text" placeholder="Enter Author Name">
+
+    <select>
+      <option>Select Category</option>
+      <option>Computer Science</option>
+      <option>Engineering</option>
+      <option>Mathematics</option>
+      <option>Fiction</option>
+      <option>History</option>
+    </select>
+
+    <button class="btn primary">Search</button>
+  </div>
+</section>
+
+<!-- ================= FEATURED BOOKS ================= -->
+<section class="featured" id="featured">
+  <h2>Featured Books</h2>
+
+  <div class="book-grid">
+    <div class="book-card">
+      <img src="assets/images/book1.jpg">
+      <h3>Introduction to C Programming</h3>
+      <p>Author: Dennis Ritchie</p>
+      <span class="status available">Available</span>
     </div>
 
-</div>
+    <div class="book-card">
+      <img src="assets/images/book2.jpg">
+      <h3>Data Structures</h3>
+      <p>Author: Mark Allen Weiss</p>
+      <span class="status issued">Issued</span>
+    </div>
 
+    <div class="book-card">
+      <img src="assets/images/book3.jpg">
+      <h3>Operating Systems</h3>
+      <p>Author: Abraham Silberschatz</p>
+      <span class="status available">Available</span>
+    </div>
+
+    <div class="book-card">
+      <img src="assets/images/book4.jpg">
+      <h3>Database Management Systems</h3>
+      <p>Author: Korth</p>
+      <span class="status issued">Issued</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RECOMMENDATIONS ================= -->
+<section class="recommend" id="recommend">
+  <h2>Recommended Books</h2>
+
+  <div class="recommend-grid">
+    <div class="recommend-card">
+      <p>📘 Clean Code - Robert C. Martin</p>
+    </div>
+
+    <div class="recommend-card">
+      <p>📕 Python for Beginners</p>
+    </div>
+
+    <div class="recommend-card">
+      <p>📗 Artificial Intelligence Basics</p>
+    </div>
+
+    <div class="recommend-card">
+      <p>📙 Web Development Guide</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ADMIN PANEL ================= -->
+<section class="admin-section" id="admin">
+  <h2>Admin Panel (Librarian Use)</h2>
+
+  <div class="admin-grid">
+    <div class="admin-card">
+      <h3>Add New Book</h3>
+      <input type="text" placeholder="Book Name">
+      <input type="text" placeholder="Author Name">
+      <input type="text" placeholder="Category">
+      <button class="btn primary">Add Book</button>
+    </div>
+
+    <div class="admin-card">
+      <h3>Update Book</h3>
+      <input type="text" placeholder="Book ID">
+      <input type="text" placeholder="New Details">
+      <button class="btn primary">Update</button>
+    </div>
+
+    <div class="admin-card">
+      <h3>Remove Book</h3>
+      <input type="text" placeholder="Book ID">
+      <button class="btn outline">Remove</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>Minor Project 1 - Library Book Availability System</p>
+  <p>Department of CSE | B.Tech 2nd Semester</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
