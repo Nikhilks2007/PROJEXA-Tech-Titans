@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Realistic Lamp Login</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at left, #0f1720, #05070b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.scene {
+  display: flex;
+  gap: 90px;
+  align-items: center;
+}
+
+/* ================= LAMP ================= */
+.lamp {
+  position: relative;
+  width: 140px;
+}
+
+.shade {
+  position: relative;
+  width: 140px;
+  height: 95px;
+  background: linear-gradient(#2c3138, #14171c);
+  border-radius: 14px 14px 28px 28px;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.inner-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,220,.9), transparent 70%);
+  opacity: 0;
+  transition: .4s;
+}
+
+.lamp.on .inner-glow {
+  opacity: 1;
+}
+
+.lamp.on .shade {
+  background: linear-gradient(#cddfcf, #8fae92);
+  box-shadow: 0 0 50px rgba(170,255,210,.7);
+}
+
+.stand {
+  width: 12px;
+  height: 85px;
+  margin: auto;
+  background: linear-gradient(to right, #777, #bbb, #777);
+}
+
+.base {
+  width: 70px;
+  height: 12px;
+  margin: auto;
+  border-radius: 6px;
+  background: linear-gradient(to right, #666, #999, #666);
+}
+
+/* ================= STRING ================= */
+.string-wrap {
+  position: absolute;
+  left: 50%;
+  top: 95px;
+  transform-origin: top center;
+}
+
+.string {
+  width: 2px;
+  height: 75px;
+  background: linear-gradient(#eee, #bbb);
+  margin: auto;
+}
+
+.knob {
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,.4);
+}
+
+/* ================= LOGIN ================= */
+.login {
+  width: 330px;
+  background: #0f141b;
+  padding: 28px;
+  border-radius: 14px;
+  opacity: 0;
+  transform: translateX(40px);
+  pointer-events: none;
+  transition: .4s ease;
+}
+
+.login.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  box-shadow: 0 0 35px rgba(120,255,180,.45);
+}
+
+.login h2 {
+  margin-bottom: 20px;
+}
+
+.login input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  background: #1b222c;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+.login button {
+  width: 100%;
+  padding: 12px;
+  background: #2ecc71;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="scene">
+
+  <div class="lamp" id="lamp">
+    <div class="shade">
+      <div class="inner-glow"></div>
+    </div>
+    <div class="stand"></div>
+    <div class="base"></div>
+
+    <div class="string-wrap" id="stringWrap">
+      <div class="string" id="string"></div>
+      <div class="knob" id="knob"></div>
+    </div>
+  </div>
+
+  <div class="login" id="login">
+    <h2>Welcome Back</h2>
+    <input placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+  </div>
+
+</div>
+
+<script>
+const lamp = document.getElementById("lamp");
+const login = document.getElementById("login");
+const stringWrap = document.getElementById("stringWrap");
+const string = document.getElementById("string");
+
+const pullSound = new Audio("pull.mp3");
+const switchSound = new Audio("switch.mp3");
+
+let pulling = false;
+let isOn = false;
+let length = 75;
+let angle = 0;
+
+window.addEventListener("pointerdown", (e) => {
+  if (!e.target.classList.contains("knob")) return;
+  pulling = true;
+});
+
+window.addEventListener("pointermove", (e) => {
+  if (!pulling) return;
+
+  const dx = e.movementX;
+  const dy = e.movementY;
+
+  angle = Math.max(-15, Math.min(15, angle + dx * 0.5));
+  length = Math.max(75, Math.min(140, length + dy));
+
+  string.style.height = length + "px";
+  stringWrap.style.transform =
+    `translateX(-50%) rotate(${angle}deg)`;
+});
+
+window.addEventListener("pointerup", () => {
+  if (!pulling) return;
+  pulling = false;
+
+  if (length > 120) {
+    isOn = !isOn;
+    lamp.classList.toggle("on", isOn);
+    login.classList.toggle("show", isOn);
+    switchSound.currentTime = 0;
+    switchSound.play();
+  }
+
+  pullSound.currentTime = 0;
+  pullSound.play();
+
+  // spring back
+  string.style.transition = "height .3s cubic-bezier(.34,1.56,.64,1)";
+  stringWrap.style.transition = "transform .4s ease-out";
+
+  length = 75;
+  angle = 0;
+
+  string.style.height = length + "px";
+  stringWrap.style.transform = "translateX(-50%) rotate(0deg)";
+
+  setTimeout(() => {
+    string.style.transition = "";
+    stringWrap.style.transition = "";
+  }, 400);
+});
+</script>
+
+</body>
+</html>
