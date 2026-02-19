@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Realistic Lamp Login</title>
+<title>Interactive Lamp Login</title>
 
 <style>
 * {
@@ -18,18 +18,61 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
+  overflow: hidden;
+  animation: pageFade 1.5s ease;
+  transition: background 0.6s ease;
+}
+
+/* Page fade */
+@keyframes pageFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .scene {
   display: flex;
-  gap: 90px;
+  gap: 120px;
   align-items: center;
+  position: relative;
+}
+
+/* ================= HINT TEXT ================= */
+.hint {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+  animation: fadeHint 3s infinite alternate;
+}
+
+@keyframes fadeHint {
+  from { opacity: 0.2; }
+  to { opacity: 0.6; }
 }
 
 /* ================= LAMP ================= */
 .lamp {
   position: relative;
   width: 140px;
+  opacity: 0.15;
+  filter: blur(4px);
+  transition: 1s ease;
+  animation: float 4s ease-in-out infinite;
+}
+
+.lamp:hover {
+  opacity: 1;
+  filter: blur(0);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
 
 .shade {
@@ -56,7 +99,7 @@ body {
 
 .lamp.on .shade {
   background: linear-gradient(#cddfcf, #8fae92);
-  box-shadow: 0 0 50px rgba(170,255,210,.7);
+  box-shadow: 0 0 80px rgba(170,255,210,.9);
 }
 
 .stand {
@@ -96,49 +139,62 @@ body {
   border-radius: 50%;
   margin: auto;
   box-shadow: 0 2px 6px rgba(0,0,0,.4);
+  cursor: pointer;
 }
 
 /* ================= LOGIN ================= */
 .login {
-  width: 330px;
+  width: 340px;
   background: #0f141b;
-  padding: 28px;
-  border-radius: 14px;
+  padding: 32px;
+  border-radius: 16px;
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(50px);
   pointer-events: none;
-  transition: .4s ease;
+  transition: .5s ease;
 }
 
 .login.show {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
-  box-shadow: 0 0 35px rgba(120,255,180,.45);
+  box-shadow: 0 0 40px rgba(120,255,180,.5);
 }
 
 .login h2 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-weight: 600;
 }
 
 .login input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 14px;
+  padding: 14px;
+  margin-bottom: 16px;
   background: #1b222c;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   color: white;
+  transition: 0.3s;
+}
+
+.login input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2ecc71;
 }
 
 .login button {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   background: #2ecc71;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.login button:hover {
+  background: #27ae60;
 }
 </style>
 </head>
@@ -146,6 +202,8 @@ body {
 <body>
 
 <div class="scene">
+
+  <p class="hint">Pull the string to continue</p>
 
   <div class="lamp" id="lamp">
     <div class="shade">
@@ -174,9 +232,7 @@ const lamp = document.getElementById("lamp");
 const login = document.getElementById("login");
 const stringWrap = document.getElementById("stringWrap");
 const string = document.getElementById("string");
-
-const pullSound = new Audio("pull.mp3");
-const switchSound = new Audio("switch.mp3");
+const body = document.body;
 
 let pulling = false;
 let isOn = false;
@@ -210,14 +266,16 @@ window.addEventListener("pointerup", () => {
     isOn = !isOn;
     lamp.classList.toggle("on", isOn);
     login.classList.toggle("show", isOn);
-    switchSound.currentTime = 0;
-    switchSound.play();
+
+    if (isOn) {
+      body.style.background =
+        "radial-gradient(circle at center, #1e293b, #020617)";
+    } else {
+      body.style.background =
+        "radial-gradient(circle at left, #0f1720, #05070b)";
+    }
   }
 
-  pullSound.currentTime = 0;
-  pullSound.play();
-
-  // spring back
   string.style.transition = "height .3s cubic-bezier(.34,1.56,.64,1)";
   stringWrap.style.transition = "transform .4s ease-out";
 
