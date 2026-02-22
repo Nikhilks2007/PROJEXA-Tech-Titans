@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #8e2de2, #ff6a88);
+}
+
+#authContainer {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* LEFT PANEL */
+#authLeft {
+    width: 40%;
+    background: linear-gradient(135deg, #d16ba5, #c777b9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+#authLeft h1 {
+    font-size: 28px;
+}
+
+#authLeft h2 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+#authLeft p {
+    margin-bottom: 30px;
+}
+
+#toggleBtn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #c777b9;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RIGHT PANEL */
+#authRight {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formBox {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formBox h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.formBox input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+}
+
+.formBox input:focus {
+    border-color: #8e2de2;
+}
+
+.forgot {
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #8e2de2;
+}
+
+.primaryBtn {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #8e2de2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primaryBtn:hover {
+    background: #6a1bbf;
+}
+
+.hidden {
+    display: none;
+}
