@@ -12,3 +12,13 @@ Btn.addEventListener("click", function() {
         Btn.innerText = "Switch to Sign Up";
     }
 });
+
+signupForm.addEventListener("submit", function(e) {
+    if (signupPassword.value !== signupConfirmPassword.value) {
+        e.preventDefault();
+        errorMsg.innerText = "Passwords do not match!";
+        errorMsg.style.color = "red";
+    } else {
+        errorMsg.innerText = "";
+    }
+});
