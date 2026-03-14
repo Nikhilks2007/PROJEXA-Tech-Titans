@@ -1,203 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Library Book Availability System</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/Library-System/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Book Availability & Recommendation System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-  <div class="logo">
-    <img src="/Library-System/assets/images/logo.png" alt="Logo">
-    <span>Library System</span>
-  </div>
+<div id="wrapper">
 
-  <div class="nav-links">
-    <a href="#overview">Overview</a>
-    <a href="#search">Search Books</a>
-    <a href="#featured">Featured</a>
-    <a href="#recommend">Recommendations</a>
-    <a href="#admin">Admin</a>
-  </div>
+    <!-- ================= PAGE 1 (Hero Section) ================= -->
+    <div id="page1">
 
-  <div class="nav-buttons">
-    <button class="btn outline"><a href="/Library-System/login.html" target="_blank">Log In</a></button>
-    <button class="btn primary">Sign Up</button>
-  </div>
-</nav>
+        <nav id="navbar">
+            <p id="navLogo">BookNest</p>
 
-<!-- ================= HERO SECTION ================= -->
-<section class="hero" id="overview">
-  <div class="hero-text">
-    <h1>Library Book Availability & Recommendation System</h1>
-    <p>
-      This project is a simple computer-based system that helps students
-      and librarians to check book availability, search books easily, and
-      get recommendations based on interest and popular books.
-    </p>
+            <div id="navLinks">
+                <a href="#page1">Home</a>
+                <a href="#page2">Categories</a>
+                <a href="#page3">Featured</a>
+                <a href="#page4">Testimonials</a>
+                <a href="#footer">Admin</a>
+            </div>
 
-    <p>
-      The main goal is to reduce manual work, save time, and improve
-      the overall library management process.
-    </p>
+            <div id="navButtons">
+              <a href="login.html" class="navBtn outline" target="_blank">Login</a>
+              <a href="login.html" class="navBtn primary">Sign Up</a>
+            </div>
+        </nav>
 
-    <button class="btn primary">Explore Library</button>
-  </div>
+        <div id="heroSection">
+            <div id="heroLeft">
+                <h1>Find Books Instantly</h1>
+                <h1>Smart Recommendations</h1>
+                <p>
+                    A modern digital platform to check real-time book availability,
+                    search by category, and get intelligent recommendations.
+                </p>
+                <button id="exploreBtn">Explore Library</button>
+            </div>
 
-  <div class="hero-image">
-    <img src="/Library-System/assets/images/library-hero.jpg" alt="Library Image">
-  </div>
-</section>
+            <div id="heroRight">
+                <img src="images/Library_3.jpg" alt="Library">
+            </div>
+        </div>
 
-<!-- ================= OBJECTIVES ================= -->
-<section class="objectives">
-  <h2>Project Objectives</h2>
+        <div id="searchBox">
+            <input type="text" placeholder="Search by Book Name">
+            <input type="text" placeholder="Enter Author Name">
+            <select>
+                <option>All Categories</option>
+                <option>Computer Science</option>
+                <option>Engineering</option>
+                <option>Mathematics</option>
+                <option>Fiction</option>
+            </select>
+            <button id="btn">Search</button>
+        </div>
 
-  <div class="objective-grid">
-    <div class="objective-card">
-      <h3>Real-Time Availability</h3>
-      <p>Show whether a book is available or already issued.</p>
     </div>
 
-    <div class="objective-card">
-      <h3>Search System</h3>
-      <p>Allow users to search books by name, author, or category.</p>
+    <!-- ================= PAGE 2 (Categories) ================= -->
+    <div id="page2">
+        <h1>Browse By Category</h1>
+
+        <div id="categoryContainer">
+            <div class="categoryBox">Computer Science</div>
+            <div class="categoryBox">Engineering</div>
+            <div class="categoryBox">Mathematics</div>
+            <div class="categoryBox">Fiction</div>
+            <div class="categoryBox">History</div>
+            <div class="categoryBox">AI & ML</div>
+        </div>
     </div>
 
-    <div class="objective-card">
-      <h3>Recommendations</h3>
-      <p>Suggest books based on user interest and popular choices.</p>
+    <!-- ================= PAGE 3 (Books) ================= -->
+
+    <!-- Trending Books Section -->
+    <section class="book-section">
+    
+        <h2>Trending Books</h2>
+
+        <div class="slider-wrapper">
+
+            <div class="arrow left" onclick="scrollLeft(this)">&#10094;</div>
+            
+            <div class="book-container" id="bookSlider">
+         
+                <div class="book-card">             
+                    <img src="images/book5.jpg" alt="">        
+                    <p>You Become What You Think: Master Your Mind, Master Your Life</p>      
+                    <p>Author: Shubham Kumar Singh</p>
+                    <button class="btn disabled">Checked Out</button>    
+                </div>
+
+                <div class="book-card">           
+                    <img src="images/book6.jpg" alt="">      
+                    <p>Ratan Tata : A Life</p>   
+                    <p>Author: Thomas Mathew</p>
+                    <button class="btn">Preview Only</button> 
+                </div>
+
+                <div class="book-card">              
+                    <img src="images/book7.jpg" alt="">   
+                    <p>Never Lost</p>
+                    <p>Author: Preeti Shenoy</p>         
+                    <button class="btn">Borrow</button>
+                </div>
+  
+                <div class="book-card"> 
+                    <img src="images/book8.jpg" alt="">
+                    <p>Learning How to Fly: Life Lessons for the Youth</p>        
+                    <p>Author: A.P.J. Abdul Kalam</p>    
+                    <button class="btn disabled">Checked Out</button>          
+                </div>
+     
+                <div class="book-card">            
+                    <img src="images/book9.jpg" alt="">     
+                    <p>Harry Potter and the Philosopher's Stone</p> 
+                    <p>Author: J.K. Rowling</p>        
+                    <button class="btn">Read</button>           
+                </div>
+     
+                <div class="book-card">             
+                    <img src="images/book10.jpg" alt="">    
+                    <p>Unfinished: A Memoir</p>
+                    <p>Author: Priyanka Chopra Jonas</p>      
+                    <button class="btn">Read</button>
+                </div>
+
+                <div class="book-card">             
+                    <img src="images/book11.jpg" alt="">    
+                    <p>The Last Hope</p>
+                    <p>Author: Taylor Swift</p>      
+                    <button class="btn disabled">Checked Out</button>
+                </div>
+
+                <div class="book-card">             
+                    <img src="images/book12.jpg" alt="">    
+                    <p>The Art of Being Alone</p>
+                    <p>Author: Taylor Swift</p>      
+                    <button class="btn">Read</button>
+                </div>
+
+                <div class="book-card">             
+                    <img src="images/book13.jpg" alt="">    
+                    <p>Die For You</p>
+                    <p>Author: Lauren Jackson</p>      
+                    <button class="btn disabled">Checked Out</button>
+                </div>
+
+                <div class="book-card">             
+                    <img src="images/book14.jpg" alt="">    
+                    <p>Destiny Of Souls</p>
+                    <p>Author: John Smith</p>      
+                    <button class="btn">Read</button>
+                </div>
+
+                <div class="book-card">             
+                    <img src="images/book15.jpg" alt="">    
+                    <p>True Friends</p>
+                    <p>Author: Vrinda Shandilya</p>      
+                    <button class="btn">Read</button>
+                </div>
+
+                <div class="book-card">             
+                    <img src="images/book16.jpg" alt="">    
+                    <p>Beloved</p>
+                    <p>Author: Toni Morrison</p>      
+                    <button class="btn">Read</button>
+                </div>
+
+                <div class="book-card">             
+                    <img src="images/book17.jpg" alt="">    
+                    <p>In the Silence you left Behind</p>
+                    <p>Author: Sumitra Manda</p>      
+                    <button class="btn">Read</button>
+                </div>
+
+                <div class="book-card">             
+                    <img src="images/book18.jpg" alt="">    
+                    <p>Endurance</p>
+                    <p>Author: John Smith</p>      
+                    <button class="btn">Read</button>
+                </div>
+
+            </div>
+
+            <div class="arrow right" onclick="scrollRight(this)">&#10095;</div>
+        </div>
+    </section>
+
+    <section class="book-section">
+    
+     <!-- CODING BOOKS -->
+    <h2>Coding Books</h2>
+
+    <div class="slider-wrapper">
+        
+        <div class="arrow left" onclick="scrollLeft(this)">&#10094;</div>
+            
+        <div class="book-container" id="bookSlider">
+            
+            <div class="book-card">               
+                <img src="images/book19.jpg" alt="">              
+                <p>Programming with Java</p>      
+                <p>Author: E. Balagurusamy</p>
+                <button class="btn disabled">Checked Out</button>    
+            </div>
+  
+            <div class="book-card">                      
+                <img src="images/book20.jpg" alt="">                 
+                <p>From ML Algorithms to GenAI & LLMs</p>             
+                <p>Author: Aman Kharwal</p>       
+                <button class="btn">Preview Only</button>              
+            </div>
+              
+            <div class="book-card">                            
+                <img src="images/book21.jpg" alt="">                 
+                <p>Object Oriented Programming with C++</p>               
+                <p>Author: E Balagurusamy</p>                
+                <button class="btn">Borrow</button> 
+            </div>
+              
+            <div class="book-card">                
+                <img src="images/book22.jpg" alt="">                
+                <p>Python for AI</p>                          
+                <p>Author: Gilbert</p>                   
+                <button class="btn disabled">Checked Out</button>          
+            </div>
+     
+                
+            <div class="book-card">                  
+                <img src="images/book23.jpg" alt="">        
+                <p>SQL Coding For Beginners</p> 
+                <p>Author: Fawn Watson</p>        
+                <button class="btn">Read</button>           
+            </div>
+     
+                
+            <div class="book-card">              
+                <img src="images/book24.jpg" alt="">             
+                <p>Java Projects</p>
+                <p>Author: Peter Verhas</p>      
+                <button class="btn">Read</button>                
+            </div>
+
+            <div class="book-card">             
+                <img src="images/book25.jpg" alt="">    
+                <p>C++ For Beginner's</p>
+                <p>Author: Gilbert</p>      
+                <button class="btn disabled">Checked Out</button>
+            </div>
+
+            <div class="book-card">             
+                <img src="images/book26.jpg" alt="">    
+                <p>Coding Interview Patterns</p>
+                <p>Author: Alex Hu</p>      
+                <button class="btn">Read</button>
+            </div>
+            
+            <div class="book-card">             
+                <img src="images/book27.jpg" alt="">    
+                <p>Advanced CUDA Programming</p>
+                <p>Author: Gareth Morgan </p>      
+                <button class="btn">Read</button>
+            </div>
+
+            <div class="book-card">             
+                <img src="images/book28.jpg" alt="">    
+                <p>Extreme C</p>
+                <p>Author: Kamran Amini</p>      
+                <button class="btn disabled">Checked Out</button>
+            </div>
+
+            <div class="book-card">             
+                <img src="images/book29.jpg" alt="">    
+                <p>Effective Python</p>
+                <p>Author: Brett Slatkin</p>      
+                <button class="btn">Read</button>
+            </div>
+
+            <div class="book-card">             
+                <img src="images/book30.jpg" alt="">    
+                <p>AI-Assisted Programming</p>
+                <p>Author: Tom Taulli</p>      
+                <button class="btn">Read</button>
+            </div>
+        </div>
+
+        <div class="arrow right" onclick="scrollRight(this)">&#10095;
+    </div>
+    
+
+    </section>
+
+
+
+    <div id="page3">
+       
+        <h1>Featured Books</h1>
+
+        <div id="featuredContainer">
+
+            <div class="bookCard">
+                <img src="images/book1.jpg">
+                <p><strong>Clean Code</strong></p>
+                <p>Robert C. Martin</p>
+                <span class="available">Available</span>
+            </div>
+
+            <div class="bookCard">
+                <img src="images/book2.jpg">
+                <p><strong>Operating Systems</strong></p>
+                <p>Abraham Silberschatz</p>
+                <span class="issued">Issued</span>
+            </div>
+
+            <div class="bookCard">
+                <img src="images/book3.jpg">
+                <p><strong>DBMS</strong></p>
+                <p>Korth</p>
+                <span class="available">Available</span>
+            </div>
+
+            <div class="bookCard">
+                <img src="images/book4.jpg">
+                <p><strong>Data Structures</strong></p>
+                <p>Mark Allen Weiss</p>
+                <span class="available">Available</span>
+            </div>
+
+            <div class="bookCard">
+                <img src="images/book5.jpg">
+                <p><strong>Artificial Intelligence</strong></p>
+                <p>Stuart Russell</p>
+                <span class="issued">Issued</span>
+            </div>
+
+        </div>
     </div>
 
-    <div class="objective-card">
-      <h3>Reduce Manual Work</h3>
-      <p>Help librarians manage books digitally and easily.</p>
+    <!-- ================= PAGE 4 (Testimonials) ================= -->
+    <div id="page4">
+        <h1>What Our Users Say</h1>
+
+        <div id="testimonialContainer">
+
+            <div class="testimonialBox">
+                <img src="images/user1.jpg" alt="">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>"Very easy to check book availability. Saves so much time!"</p>
+                <strong>Jitesh Kumar</strong>
+            </div>
+
+            <div class="testimonialBox">
+                <img src="images/user2.jpg" alt="">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>"Smart recommendation system helped me find the best books."</p>
+                <strong>Rahul Sharma</strong>
+            </div>
+
+            <div class="testimonialBox">
+                <img src="images/user3.jpg" alt="">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>"User-friendly interface and fast search system."</p>
+                <strong>Vishesh Baghel</strong>
+            </div>
+
+        </div>
     </div>
 
-    <div class="objective-card">
-      <h3>Improve Speed</h3>
-      <p>Make the library process faster and more accurate.</p>
-    </div>
-  </div>
-</section>
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer">
+        <p>© 2026 Library Book Availability & Recommendation System</p>
+        <p>B.Tech CSE Core  Minor Project</p><br><br>
+        <a href="#navbar" style="color: rgb(108, 247, 150);">Back To Top &#8593</a>                  
+    </footer>
 
-<!-- ================= SEARCH BAR ================= -->
-<section class="search-section" id="search">
-  <h2>Search Books</h2>
+</div>
 
-  <div class="search-bar">
-    <input type="text" placeholder="Enter Book Name">
-    <input type="text" placeholder="Enter Author Name">
-
-    <select>
-      <option>Select Category</option>
-      <option>Computer Science</option>
-      <option>Engineering</option>
-      <option>Mathematics</option>
-      <option>Fiction</option>
-      <option>History</option>
-    </select>
-
-    <button class="btn primary">Search</button>
-  </div>
-</section>
-
-<!-- ================= FEATURED BOOKS ================= -->
-<section class="featured" id="featured">
-  <h2>Featured Books</h2>
-
-  <div class="book-grid">
-    <div class="book-card">
-      <img src="assets/images/book1.jpg">
-      <h3>Introduction to C Programming</h3>
-      <p>Author: Dennis Ritchie</p>
-      <span class="status available">Available</span>
-    </div>
-
-    <div class="book-card">
-      <img src="assets/images/book2.jpg">
-      <h3>Data Structures</h3>
-      <p>Author: Mark Allen Weiss</p>
-      <span class="status issued">Issued</span>
-    </div>
-
-    <div class="book-card">
-      <img src="assets/images/book3.jpg">
-      <h3>Operating Systems</h3>
-      <p>Author: Abraham Silberschatz</p>
-      <span class="status available">Available</span>
-    </div>
-
-    <div class="book-card">
-      <img src="assets/images/book4.jpg">
-      <h3>Database Management Systems</h3>
-      <p>Author: Korth</p>
-      <span class="status issued">Issued</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= RECOMMENDATIONS ================= -->
-<section class="recommend" id="recommend">
-  <h2>Recommended Books</h2>
-
-  <div class="recommend-grid">
-    <div class="recommend-card">
-      <p>📘 Clean Code - Robert C. Martin</p>
-    </div>
-
-    <div class="recommend-card">
-      <p>📕 Python for Beginners</p>
-    </div>
-
-    <div class="recommend-card">
-      <p>📗 Artificial Intelligence Basics</p>
-    </div>
-
-    <div class="recommend-card">
-      <p>📙 Web Development Guide</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= ADMIN PANEL ================= -->
-<section class="admin-section" id="admin">
-  <h2>Admin Panel (Librarian Use)</h2>
-
-  <div class="admin-grid">
-    <div class="admin-card">
-      <h3>Add New Book</h3>
-      <input type="text" placeholder="Book Name">
-      <input type="text" placeholder="Author Name">
-      <input type="text" placeholder="Category">
-      <button class="btn primary">Add Book</button>
-    </div>
-
-    <div class="admin-card">
-      <h3>Update Book</h3>
-      <input type="text" placeholder="Book ID">
-      <input type="text" placeholder="New Details">
-      <button class="btn primary">Update</button>
-    </div>
-
-    <div class="admin-card">
-      <h3>Remove Book</h3>
-      <input type="text" placeholder="Book ID">
-      <button class="btn outline">Remove</button>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <p>Minor Project 1 - Library Book Availability System</p>
-  <p>Department of CSE | B.Tech 2nd Semester</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
-
