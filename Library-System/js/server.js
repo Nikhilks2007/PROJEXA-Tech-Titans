@@ -1,8 +1,23 @@
-// Smooth Scroll Effect
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-  });
+document.addEventListener("DOMContentLoaded", function () {
+
+    const sliders = document.querySelectorAll(".slider-wrapper");
+
+    sliders.forEach(wrapper => {
+
+        const container = wrapper.querySelector(".book-container");
+        const leftBtn = wrapper.querySelector(".arrow.left");
+        const rightBtn = wrapper.querySelector(".arrow.right");
+
+        const scrollAmount = 300;
+
+        leftBtn.addEventListener("click", function () {
+            container.scrollLeft -= scrollAmount;
+        });
+
+        rightBtn.addEventListener("click", function () {
+            container.scrollLeft += scrollAmount;
+        });
+
+    });
+
 });
