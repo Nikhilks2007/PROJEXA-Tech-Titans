@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Premium Book</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right,#1d4350,#a43931);
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width:400px;
+    margin:80px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0px 0px 15px black;
+}
+
+.status{
+    background:green;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    display:inline-block;
+    font-weight:bold;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:#ff4b2b;
+    color:white;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff1e00;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <img src="http://127.0.0.1:5500/PROJEXA-Tech-Titans/Library-System/assets/images/book13.jpg" alt="" class="book-img"    style="width: 200px; height: 260px; object-fit: cover; border-radius: 10px;">
+
+
+<h2>Die For You</h2>
+
+<div class="status">✔ Already Purchased</div>
+
+<p>You can now read your premium content.</p>
+
+<button onclick="readBook()">Open Book</button>
+
+</div>
+
+<script>
+function readBook(){
+    window.location.href="pdfviewer.html";
+}
+</script>
+
+</body>
+</html>
