@@ -11,7 +11,7 @@ const books = [
     title: "Effective Java",
     author: "Joshua Bloch",
     category: "Computer Science",
-    status: "not Available"
+    status: "Available"
   },
   {
     title: "Introduction to Algorithms",
