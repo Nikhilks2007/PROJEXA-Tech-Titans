@@ -389,6 +389,7 @@
     color: white;
 }
 
+<<<<<<< HEAD
 /* Founder Section */
 .founder {
   padding: 60px 20px;
@@ -478,4 +479,41 @@
   object-fit: cover;
 
 
+=======
+
+/* ===== Founder Section ===== */
+.founder-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Title */
+.founder-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Image */
+.founder-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Name */
+.founder-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.founder-desc {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #555;
+>>>>>>> e04a103f86d639387a67f65da714bdf788530639
 }
