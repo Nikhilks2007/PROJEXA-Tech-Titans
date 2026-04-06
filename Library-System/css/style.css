@@ -389,6 +389,94 @@
     color: white;
 }
 
+/* Founder Section */
+.founder {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.founder h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #1F2937;
+}
+
+/* Layout */
+.founder-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Image */
+.founder-img img {
+  width: 250px;
+}
+
+/* Content */
+.founder-content {
+  max-width: 400px;
+  text-align: left;
+}
+
+.founder-content h3 {
+  font-size: 26px;
+  color: #1F2937;
+}
+
+.role {
+  color: #FF7A00;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.founder-content ul {
+  padding-left: 20px;
+}
+
+.founder-content li {
+  margin-bottom: 10px;
+}
+
+/* Quote */
+.quote {
+  margin-top: 40px;
+  font-style: italic;
+}
+
+.quote p {
+  font-size: 18px;
+  color: #374151;
+}
+
+.quote h4 {
+  margin-top: 10px;
+  color: #1F2937;
+}
+.founder-badge {
+  position: relative;
+  width: 340px;
+}
+
+/* Badge */
+.badge {
+  width: 100%;
+}
+
+/* Profile image (circle ke andar) */
+.profile {
+  position: absolute;
+  top: 31px;       /* adjust kar sakta hai */
+  left: 51%;
+  transform: translateX(-50%);
+  
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 /* ===== Founder Section ===== */
 .founder-section {
@@ -424,4 +512,5 @@
     margin: 0 auto;
     font-size: 16px;
     color: #555;
+
 }
