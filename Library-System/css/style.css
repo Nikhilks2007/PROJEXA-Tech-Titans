@@ -961,3 +961,46 @@
     border-radius: 15px;
     text-align: center;
 }
+
+/* POPUP BUTTONS */
+.popup-content button {
+    padding: 10px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* LOGIN BUTTON */
+.popup-content a:first-of-type button {
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+}
+
+.popup-content a:first-of-type button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.7);
+}
+
+/* SIGNUP BUTTON */
+.popup-content a:last-of-type button {
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    color: white;
+}
+
+.popup-content a:last-of-type button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 106, 0, 0.7);
+}
+
+/* CLOSE BUTTON */
+.popup-content > button {
+    background: #333;
+    color: white;
+}
+
+.popup-content > button:hover {
+    background: black;
+}

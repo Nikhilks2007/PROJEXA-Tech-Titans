@@ -1,26 +1,34 @@
-const books = [
-  {
-    title: "Clean Code",
-    author: "Robert C. Martin",
-    category: "Computer Science",
-    status: "Available"
-  },
-  {
-    title: "Operating Systems",
-    author: "Abraham Silberschatz",
-    category: "Engineering",
-    status: "Issued"
-  },
-  {
-    title: "Harry Potter and the Philosopher's Stone",
-    author: "J.K. Rowling",
-    category: "Fiction",
-    status: "Available"
-  },
-  {
-    title: "Effective Python",
-    author: "Brett Slatkin",
-    category: "Programming",
-    status: "Available"
-  }
-];
+function handleAction(type) {
+
+    if (type === "free") {
+        openLoginPopup();   // login popup
+    }
+
+    else if (type === "premium") {
+        openPopup();        // premium popup
+    }
+
+    else if (type === "preview") {
+        alert("Preview opened 📖");
+    }
+
+    else if (type === "borrow") {
+        alert("Book borrowed successfully 📚");
+    }
+}
+
+function openPopup() {
+    document.getElementById("premiumPopup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("premiumPopup").style.display = "none";
+}
+
+function openLoginPopup() {
+    document.getElementById("loginPopup").style.display = "flex";
+}
+
+function closeLoginPopup() {
+    document.getElementById("loginPopup").style.display = "none";
+}

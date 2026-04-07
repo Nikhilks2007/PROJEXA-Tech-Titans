@@ -6,6 +6,7 @@
     <title>Library Book Availability & Recommendation System</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+    <script defer src="js/books.js"></script>
     
     
 
@@ -103,9 +104,7 @@
                     <img src="assets/images/rich dad poor dad img.jpg" alt="">        
                     <p>“Rich Dad Poor Dad”</p>      
                     <p>Author: Robert T. Kiyosaki</p>
-                    <a href="book pdfs/Rich-Dad-Poor-Dad.html" target="_blank">
-                    <button class="btn">Read</button>  
-                    </a>
+                    <button class="btn" onclick="handleAction('free')">Read</button>
                 </div>
          
                 <div class="book-card">  
@@ -113,9 +112,7 @@
                     <img src="assets/images/book5.jpg" alt="">        
                     <p>You Become What You Think: Master Your Mind, Master Your Life</p>      
                     <p>Author: Shubham Kumar Singh</p>
-                    <a href="book pdfs/premiumbook5.html" target="_blank">
-                    <button class="btn">Read</button>  
-                    </a>
+                    <button class="btn" onclick="handleAction('premium')">Read</button>
                 </div>
 
                 <div class="book-card"> 
@@ -123,9 +120,7 @@
                     <img src="assets/images/book6.jpg" alt="">      
                     <p>Ratan Tata : A Life</p>   
                     <p>Author: Thomas Mathew</p>
-                    <a href="book pdfs/Ratan Tata Bio.html" target="_blank">
-                    <button class="btn">Preview Only</button> 
-                    </a>
+                    <button class="btn" onclick="handleAction('preview')">Preview</button>
                 </div>
 
                 <div class="book-card"> 
@@ -133,9 +128,7 @@
                     <img src="assets/images/book7.jpg" alt="">   
                     <p>Never Lost</p>
                     <p>Author: Carol Hagler</p>  
-                    <a href="book pdfs/premiumbook7.html" target="_blank">
-                    <button class="btn">Borrow</button>
-                    </a>
+                    <button class="btn" onclick="handleAction('premium')">Read</button>
                 </div>
   
                 <div class="book-card"> 
@@ -143,9 +136,7 @@
                     <img src="assets/images/book8.jpg" alt="">
                     <p>Learning How to Fly: Life Lessons for the Youth</p>        
                     <p>Author: A.P.J. Abdul Kalam</p>
-                    <a href="book pdfs/cheekedbook8.html"  target="_blank"> 
-                    <button class="btn disabled">Checked Out</button>  
-                    </a> 
+                    <button class="btn" class="btn disabled">Checked Out</button> 
                 </div>
      
                 <div class="book-card"> 
@@ -153,9 +144,7 @@
                     <img src="assets/images/book9.jpg" alt="">     
                     <p>Harry Potter and the Philosopher's Stone</p> 
                     <p>Author: J.K. Rowling</p>        
-                    <a href="book pdfs/premiumbook9.html" target="_blank">
-                    <button class="btn">Read</button>      
-                    </a>     
+                    <button class="btn" onclick="handleAction('premium')">Read</button>     
                 </div>
      
                 <div class="book-card">  
@@ -163,9 +152,7 @@
                     <img src="assets/images/book10.jpg" alt="">    
                     <p>Unfinished: A Memoir</p>
                     <p>Author: Priyanka Chopra Jonas</p> 
-                    <a href="book pdfs/cheekedbook10.html" target="_blank">   
-                    <button class="btn disabled">Checked Out</button>  
-                    </a>    
+                    <button class="btn" onclick="handleAction('premium')">Read</button>    
                 </div>
 
                 <div class="book-card">  
@@ -173,9 +160,7 @@
                     <img src="assets/images/book11.jpg" alt="">    
                     <p>The Last Hope</p>
                     <p>Author: Taylor Swift</p>    
-                    <a href="book pdfs/cheekedbook11.html" target="_blank">
-                    <button class="btn disabled">Checked Out</button>
-                    </a>
+                    <button class="btn" onclick="handleAction('premium')">Read</button>
                 </div>
 
                 <div class="book-card"> 
@@ -183,7 +168,7 @@
                     <img src="assets/images/book12.jpg" alt="">    
                     <p>The Art of Being Alone</p>
                     <p>Author: Renuka Gavrani</p>      
-                    <button class="btn">Read</button>
+                    <button class="btn" onclick="handleAction('premium')">Read</button>
                 </div>
 
                 <div class="book-card">   
@@ -191,9 +176,7 @@
                     <img src="assets/images/book13.jpg" alt="">    
                     <p>Die For You</p>
                     <p>Author: Lauren Jackson</p> 
-                    <a href="book pdfs/cheekedbook13.html" target="_blank">
-                    <button class="btn disabled">Checked Out</button>
-                    </a>
+                    <button class="btn" onclick="handleAction('premium')">Read</button>
                 </div>
 
                 <div class="book-card">   
@@ -201,9 +184,7 @@
                     <img src="assets/images/book14.jpg" alt="">    
                     <p>Destiny Of Souls</p>
                     <p>Author: John Smith</p>   
-                    <a href="book pdfs/premiumbook14.html" target="_blank">
-                    <button class="btn">Read</button>
-                    </a>
+                    <button class="btn" onclick="handleAction('premium')">Read</button>
                 </div>
 
                 <div class="book-card">    
@@ -211,9 +192,7 @@
                     <img src="assets/images/book15.jpg" alt="">    
                     <p>True Friends</p>
                     <p>Author: Vrinda Shandilya</p>  
-                    <a href="book pdfs/premiumbook15.html" target="_blank">
-                    <button class="btn">Read</button>
-                    </a>
+                    <button class="btn" onclick="handleAction('premium')">Read</button>
                 </div>
 
                 <div class="book-card">  
@@ -221,9 +200,7 @@
                     <img src="assets/images/book16.jpg" alt="">    
                     <p>Beloved</p>
                     <p>Author: Toni Morrison</p>      
-                    <a href="book pdfs/premiumbook16.html" target="_blank">
-                    <button class="btn">Read</button>
-                    </a>
+                    <button class="btn" onclick="handleAction('premium')">Read</button>
                 </div>
 
                 <div class="book-card">      
@@ -231,9 +208,7 @@
                     <img src="assets/images/book17.jpg" alt="">    
                     <p>In the Silence you left Behind</p>
                     <p>Author: Sumitra Mandal</p>  
-                    <a href="book pdfs/premiumbook17.html" target="_blank">
-                    <button class="btn">Read</button>
-                    </a>
+                    <button class="btn" onclick="handleAction('premium')">Read</button>
                 </div>
 
                 <div class="book-card">  
@@ -241,9 +216,7 @@
                     <img src="assets/images/book18.jpg" alt="">    
                     <p>Endurance</p>
                     <p>Author: John Smith</p>      
-                    <a href="book pdfs/premiumbook18.html" target="_blank">
-                    <button class="btn">Read</button>
-                    </a>
+                    <button class="btn" onclick="handleAction('premium')">Read</button>
                 </div>
 
             </div>
@@ -267,86 +240,98 @@
                 <img src="assets/images/book19.jpg" alt="">              
                 <p>Programming with Java</p>      
                 <p>Author: E. Balagurusamy</p>
-                <button class="btn disabled">Checked Out</button>    
+                <p style="color: red;">PREMIUM</p>
+                <button class="btn" onclick="handleAction('premium')">Read</button>   
             </div>
   
             <div class="book-card">                      
                 <img src="assets/images/book20.jpg" alt="">                 
                 <p>From ML Algorithms to GenAI & LLMs</p>             
-                <p>Author: Aman Kharwal</p>       
-                <button class="btn">Preview Only</button>              
+                <p>Author: Aman Kharwal</p>  
+                <p style="color: red;">PREMIUM</p>     
+                <button class="btn" onclick="handleAction('preview')">Preview Only</button>              
             </div>
               
             <div class="book-card">                            
                 <img src="assets/images/book21.jpg" alt="">                 
                 <p>Object Oriented Programming with C++</p>               
-                <p>Author: E Balagurusamy</p>                
-                <button class="btn">Borrow</button> 
+                <p>Author: E Balagurusamy</p>
+                <p style="color: red;">PREMIUM</p>                
+                <button class="btn" onclick="handleAction('premium')">Read</button> 
             </div>
               
             <div class="book-card">                
                 <img src="assets/images/book22.jpg" alt="">                
                 <p>Python for AI</p>                          
-                <p>Author: Gilbert</p>                   
-                <button class="btn disabled">Checked Out</button>          
+                <p>Author: Gilbert</p>       
+                <p style="color: red;">PREMIUM</p>            
+                <button class="btn" onclick="handleAction('premium')">Read</button>          
             </div>
      
                 
             <div class="book-card">                  
                 <img src="assets/images/book23.jpg" alt="">        
                 <p>SQL Coding For Beginners</p> 
-                <p>Author: Fawn Watson</p>        
-                <button class="btn">Read</button>           
+                <p>Author: Fawn Watson</p>   
+                <p style="color: red;">PREMIUM</p>     
+                <button class="btn" onclick="handleAction('premium')">Read</button>           
             </div>
      
                 
             <div class="book-card">              
                 <img src="assets/images/book24.jpg" alt="">             
                 <p>Java Projects</p>
-                <p>Author: Peter Verhas</p>      
-                <button class="btn">Read</button>                
+                <p>Author: Peter Verhas</p>  
+                <p style="color: red;">PREMIUM</p>    
+                <button class="btn" onclick="handleAction('premium')">Read</button>                
             </div>
 
             <div class="book-card">             
                 <img src="assets/images/book25.jpg" alt="">    
                 <p>C++ For Beginner's</p>
                 <p>Author: Gilbert</p>      
-                <button class="btn disabled">Checked Out</button>
+                <p style="color: red;">PREMIUM</p>
+                <button class="btn" onclick="handleAction('premium')">Read</button>
             </div>
 
             <div class="book-card">             
                 <img src="assets/images/book26.jpg" alt="">    
                 <p>Coding Interview Patterns</p>
                 <p>Author: Alex Hu</p>      
-                <button class="btn">Read</button>
+                <p style="color: red;">PREMIUM</p>
+                <button class="btn" onclick="handleAction('premium')">Read</button>
             </div>
             
             <div class="book-card">             
                 <img src="assets/images/book27.jpg" alt="">    
                 <p>Advanced CUDA Programming</p>
-                <p>Author: Gareth Morgan </p>      
-                <button class="btn">Read</button>
+                <p>Author: Gareth Morgan </p>
+                <p style="color: red;">PREMIUM</p>      
+                <button class="btn" onclick="handleAction('premium')">Read</button>
             </div>
 
             <div class="book-card">             
                 <img src="assets/images/book28.jpg" alt="">    
                 <p>Extreme C</p>
-                <p>Author: Kamran Amini</p>      
-                <button class="btn disabled">Checked Out</button>
+                <p>Author: Kamran Amini</p>  
+                <p style="color: red;">PREMIUM</p>    
+                <button class="btn" onclick="handleAction('premium')">Read</button>
             </div>
 
             <div class="book-card">             
                 <img src="assets/images/book29.jpg" alt="">    
                 <p>Effective Python</p>
-                <p>Author: Brett Slatkin</p>      
-                <button class="btn">Read</button>
+                <p>Author: Brett Slatkin</p> 
+                <p style="color: red;">PREMIUM</p>     
+                <button class="btn" onclick="handleAction('premium')">Read</button>
             </div>
 
             <div class="book-card">             
                 <img src="assets/images/book30.jpg" alt="">    
                 <p>AI-Assisted Programming</p>
-                <p>Author: Tom Taulli</p>      
-                <button class="btn">Read</button>
+                <p>Author: Tom Taulli</p>   
+                <p style="color: red;">PREMIUM</p>   
+                <button class="btn" onclick="handleAction('premium')">Read</button>
             </div>
         </div>
 
@@ -368,35 +353,48 @@
                 <img src="assets/images/book1.jpg">
                 <p><strong>Clean Code</strong></p>
                 <p>Robert C. Martin</p>
+                <p style="color: red;">PREMIUM</p>
                 <span class="available">Available</span>
+                <button class="btn" onclick="handleAction('free')">Open</button>
             </div>
 
             <div class="bookCard">
                 <img src="assets/images/book2.jpg">
                 <p><strong>Operating Systems</strong></p>
                 <p>Abraham Silberschatz</p>
+                <p style="color: red;">PREMIUM</p>
                 <span class="issued">Issued</span>
+                <button class="btn" onclick="handleAction('free')">Open</button>
+
             </div>
 
             <div class="bookCard">
                 <img src="assets/images/book3.jpg">
                 <p><strong>DBMS</strong></p>
                 <p>Korth</p>
+                <p style="color: red;">PREMIUM</p>
+
                 <span class="available">Available</span>
+                <button class="btn" onclick="handleAction('free')">Open</button>
             </div>
 
             <div class="bookCard">
                 <img src="assets/images/book4.jpg">
                 <p><strong>Data Structures</strong></p>
                 <p>Mark Allen Weiss</p>
+                <p style="color: red;">PREMIUM</p>
                 <span class="available">Available</span>
+                <button class="btn" onclick="handleAction('free')">Open</button>
             </div>
 
             <div class="bookCard">
                 <img src="assets/images/book5.jpg">
                 <p><strong>Artificial Intelligence</strong></p>
                 <p>Stuart Russell</p>
+                <p style="color: red;">PREMIUM</p>
+
                 <span class="issued">Issued</span>
+                <button class="btn" onclick="handleAction('free')">Open</button>
             </div>
 
         </div>
@@ -506,6 +504,27 @@
     </p>
 
 </footer>
+
+<!-- PREMIUM POPUP -->
+<div id="premiumPopup" class="popup">
+    <div class="popup-content">
+        <h2>Premium Access 🔒</h2>
+        <p>This book is for premium users only.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<!-- LOGIN POPUP -->
+<div id="loginPopup" class="popup">
+    <div class="popup-content">
+        <h2>Login Required 🔐</h2>
+        <a href="login.html"><button>Login</button></a>
+        <a href="login.html"><button>Sign Up</button></a>
+        <br><br>
+        <button onclick="closeLoginPopup()">Close</button>
+    </div>
+</div>
+
 </div>
 
 </body>
