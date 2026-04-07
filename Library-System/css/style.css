@@ -1004,3 +1004,24 @@
 .popup-content > button:hover {
     background: black;
 }
+
+/* LOGOUT BUTTON */
+#logoutBtn {
+    padding: 8px 18px;
+    border-radius: 25px;
+    border: none;
+
+    background: linear-gradient(45deg, #ff4d4d, #ff0000);
+    color: white;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* HOVER EFFECT */
+#logoutBtn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff0000, #990000);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}

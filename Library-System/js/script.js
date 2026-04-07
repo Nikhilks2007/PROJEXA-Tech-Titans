@@ -1,3 +1,30 @@
+window.addEventListener("load", function() {
+
+    let isLoggedIn = localStorage.getItem("isLoggedIn");
+    let userName = localStorage.getItem("userName");
+
+    if (isLoggedIn === "true") {
+
+        document.getElementById("loginBtn").style.display = "none";
+        document.getElementById("signupBtn").style.display = "none";
+
+        document.getElementById("userWelcome").style.display = "inline";
+        document.getElementById("logoutBtn").style.display = "inline";
+
+        document.getElementById("userWelcome").innerText = "Welcome " + userName + " 👤";
+    }
+});
+
+// LOGOUT
+document.getElementById("logoutBtn").addEventListener("click", function() {
+
+    localStorage.removeItem("isLoggedIn");
+
+    alert("Logged out ❌");
+
+    location.reload();
+});
+
 function handleAction(type) {
 
     let isLoggedIn = localStorage.getItem("isLoggedIn");
@@ -7,7 +34,6 @@ function handleAction(type) {
 
         if (isLoggedIn === "true") {
             alert("Book Opened 📖");
-            // yaha PDF open kar sakte ho
         } else {
             openLoginPopup();
         }
@@ -17,7 +43,7 @@ function handleAction(type) {
     else if (type === "premium") {
 
         if (isLoggedIn === "true") {
-            openPopup();   // premium popup
+            openPopup();
         } else {
             openLoginPopup();
         }
