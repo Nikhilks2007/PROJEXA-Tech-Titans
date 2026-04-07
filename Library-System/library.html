@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - BookNest</title>
+    <link rel="stylesheet" href="css/library.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>BookNest</h2>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <hr>
+
+    <!-- Heading -->
+    <h1>Library Books</h1>
+
+    <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Search books..." onkeyup="searchBooks()">
+    </div>
+<br><br>
+
+    <!-- Books List -->
+    <div>
+
+        <!-- FREE BOOK -->
+<div class="book free">
+    <img src="assets/images/book1.jpg">
+    <p><b>Clean Code</b></p>
+    <p>Author: Robert C. Martin</p>
+    <p style="color: lightgreen;">FREE</p>
+
+     <button onclick="openLoginPopup()">Read</button>
+</div>
+
+<!-- PREMIUM BOOK -->
+<div class="book premium">
+    <img src="assets/images/book5.jpg">
+    <p><b>Artificial Intelligence</b></p>
+    <p>Author: Stuart Russell</p>
+    <p style="color: red;">PREMIUM</p>
+
+    <button onclick="openPopup()">Read</button>
+</div>
+
+        <div class="book">
+            <img src="assets/images/book2.jpg" width="150">
+            <p><b>Operating Systems</b></p>
+            <p>Author: Abraham Silberschatz</p>
+            <p style="color: red;">PREMIUM</p>
+            <button onclick="openPopup()">Read</button>
+        </div>
+
+        <div class="book">
+            <img src="assets/images/book3.jpg" width="150">
+            <p><b>DBMS</b></p>
+            <p>Author: Korth</p>
+            <p style="color: red;">PREMIUM</p>
+            <button onclick="openPopup()">Read</button>
+        </div>
+
+        <div class="book">
+            <img src="assets/images/book4.jpg" width="150">
+            <p><b>Data Structures</b></p>
+            <p>Author: Mark Allen Weiss</p>
+            <p style="color: red;">PREMIUM</p>
+            <button onclick="openPopup()">Read</button>
+        </div>
+
+        <div class="book">
+            <img src="assets/images/book16.jpg">
+            <p><b>Beloved</b></p>
+            <p>Author: Toni Morrison</p>
+            <p style="color: red;">PREMIUM</p>
+            <button onclick="openPopup()">Read</button>
+        </div>
+<div class="book free">
+    <img src="assets/images/free book badge.png">
+    <p><b>Think and Grow Rich</b></p>
+    <p>Author: Napoleon Hill</p>
+    <p style="color: lightgreen;">FREE</p>
+    <button onclick="openLoginPopup()">Read</button>
+</div>
+
+<div class="book free">
+    <img src="assets/images/free book badge.png">
+    <p><b>The Power of Habit</b></p>
+    <p>Author: Charles Duhigg</p>
+    <p style="color: lightgreen;">FREE</p>
+    <button onclick="openLoginPopup()">Read</button>
+</div>
+
+<div class="book free">
+    <img src="assets/images/free book badge.png">
+    <p><b>Atomic Habits</b></p>
+    <p>Author: James Clear</p>
+    <p style="color: lightgreen;">FREE</p>
+    <button onclick="openLoginPopup()">Read</button>
+</div>
+
+<div class="book free">
+    <img src="assets/images/free book badge.png">
+    <p><b>Deep Work</b></p>
+    <p>Author: Cal Newport</p>
+    <p style="color: lightgreen;">FREE</p>
+    <button onclick="openLoginPopup()">Read</button>
+</div>
+
+<div class="book free">
+    <img src="assets/images/free book badge.png">
+    <p><b>The Alchemist</b></p>
+    <p>Author: Paulo Coelho</p>
+    <p style="color: lightgreen;">FREE</p>
+    <button onclick="openLoginPopup()">Read</button>
+</div>
+
+<div class="book free">
+    <img src="assets/images/free book badge.png">
+    <p><b>Rich Dad Poor Dad</b></p>
+    <p>Author: Robert Kiyosaki</p>
+    <p style="color: lightgreen;">FREE</p>
+    <button onclick="openLoginPopup()">Read</button>
+</div>
+
+<div class="book free">
+    <img src="assets/images/free book badge.png">
+    <p><b>Zero to One</b></p>
+    <p>Author: Peter Thiel</p>
+    <p style="color: lightgreen;">FREE</p>
+    <button onclick="openLoginPopup()">Read</button>
+</div>
+
+<div class="book free">
+    <img src="assets/images/free book badge.png">
+    <p><b>Start With Why</b></p>
+    <p>Author: Simon Sinek</p>
+    <p style="color: lightgreen;">FREE</p>
+    <button onclick="openLoginPopup()">Read</button>
+</div>
+
+<div class="book free">
+    <img src="assets/images/free book badge.png">
+    <p><b>Do Epic Shit</b></p>
+    <p>Author: Ankur Warikoo</p>
+    <p style="color: lightgreen;">FREE</p>
+    <button onclick="openLoginPopup()">Read</button>
+</div>
+
+<div class="book free">
+    <img src="assets/images/free book badge.png">
+    <p><b>The Psychology of Money</b></p>
+    <p>Author: Morgan Housel</p>
+    <p style="color: lightgreen;">FREE</p>
+    <button onclick="openLoginPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book17.jpg">
+    <p><b>In the Silence You Left Behind</b></p>
+    <p>Author: Sumitra Mandal</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book18.jpg">
+    <p><b>Endurance</b></p>
+    <p>Author: John Smith</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book19.jpg">
+    <p><b>Programming with Java</b></p>
+    <p>Author: E. Balagurusamy</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book20.jpg">
+    <p><b>From ML Algorithms to GenAI</b></p>
+    <p>Author: Aman Kharwal</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book21.jpg">
+    <p><b>Object Oriented Programming with C++</b></p>
+    <p>Author: E. Balagurusamy</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book22.jpg">
+    <p><b>Python for AI</b></p>
+    <p>Author: Gilbert</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book23.jpg">
+    <p><b>SQL Coding For Beginners</b></p>
+    <p>Author: Fawn Watson</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book24.jpg">
+    <p><b>Java Projects</b></p>
+    <p>Author: Peter Verhas</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book25.jpg">
+    <p><b>C++ For Beginners</b></p>
+    <p>Author: Gilbert</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book26.jpg">
+    <p><b>Coding Interview Patterns</b></p>
+    <p>Author: Alex Hu</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book27.jpg">
+    <p><b>Advanced CUDA Programming</b></p>
+    <p>Author: Gareth Morgan</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book28.jpg">
+    <p><b>Extreme C</b></p>
+    <p>Author: Kamran Amini</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book29.jpg">
+    <p><b>Effective Python</b></p>
+    <p>Author: Brett Slatkin</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book">
+    <img src="assets/images/book30.jpg">
+    <p><b>AI-Assisted Programming</b></p>
+    <p>Author: Tom Taulli</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book premium">
+    <img src="assets/images/Premium book badge.png">
+    <p><b>The 48 Laws of Power</b></p>
+    <p>Author: Robert Greene</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book premium">
+    <img src="assets/images/Premium book badge.png">
+    <p><b>The Subtle Art of Not Giving a F*ck</b></p>
+    <p>Author: Mark Manson</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book premium">
+    <img src="assets/images/Premium book badge.png">
+    <p><b>Ikigai</b></p>
+    <p>Author: Hector Garcia</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book premium">
+    <img src="assets/images/Premium book badge.png">
+    <p><b>Can't Hurt Me</b></p>
+    <p>Author: David Goggins</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book premium">
+    <img src="assets/images/Premium book badge.png">
+    <p><b>Think Like a Monk</b></p>
+    <p>Author: Jay Shetty</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book premium">
+    <img src="assets/images/Premium book badge.png">
+    <p><b>Make Time</b></p>
+    <p>Author: Jake Knapp</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book premium">
+    <img src="assets/images/Premium book badge.png">
+    <p><b>The Lean Startup</b></p>
+    <p>Author: Eric Ries</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book premium">
+    <img src="assets/images/Premium book badge.png">
+    <p><b>Rework</b></p>
+    <p>Author: Jason Fried</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book premium">
+    <img src="assets/images/Premium book badge.png">
+    <p><b>The Hard Thing About Hard Things</b></p>
+    <p>Author: Ben Horowitz</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+<div class="book premium">
+    <img src="assets/images/Premium book badge.png">
+    <p><b>Hooked</b></p>
+    <p>Author: Nir Eyal</p>
+    <p style="color: red;">PREMIUM</p>
+    <button onclick="openPopup()">Read</button>
+</div>
+
+    </div>
+
+    <script>
+function searchBooks() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let books = document.getElementsByClassName("book");
+
+    for (let i = 0; i < books.length; i++) {
+        let text = books[i].innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            books[i].style.display = "inline-block";
+        } else {
+            books[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+<div id="premiumPopup" class="popup">
+    <div class="popup-content">
+        <h2>Premium Access Required 🔒</h2>
+        <p>This book is available for premium users only.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<script>
+function openPopup() {
+    document.getElementById("premiumPopup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("premiumPopup").style.display = "none";
+}
+</script>
+
+<div id="loginPopup" class="popup">
+    <div class="popup-content">
+        <h2>Login Required 🔐</h2>
+        <p>Please login or sign up to read this book.</p>
+
+        <a href="login.html">
+            <button>Login</button>
+        </a>
+
+        <a href="login.html">
+            <button>Sign Up</button>
+        </a>
+
+        <br><br>
+        <button onclick="closeLoginPopup()">Close</button>
+    </div>
+</div>
+
+<script>
+function openLoginPopup() {
+    document.getElementById("loginPopup").style.display = "flex";
+}
+
+function closeLoginPopup() {
+    document.getElementById("loginPopup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
